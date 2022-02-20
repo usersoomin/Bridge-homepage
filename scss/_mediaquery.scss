@@ -1,0 +1,24 @@
+@media screen and (max-width: 768px) {
+    .menu {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+
+        > .logo {
+            align-self: flex-start;
+        }
+
+        > .navbar {
+
+            > .submenu {
+                
+            }
+        }
+
+        > .search {
+            position: absolute;
+            top: 10%;
+            left: 65%;
+        }
+    }
+}

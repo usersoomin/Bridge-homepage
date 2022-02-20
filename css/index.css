@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu > .logo {
+    align-self: flex-start;
+  }
+  .menu > .search {
+    position: absolute;
+    top: 10%;
+    left: 65%;
+  }
+}
+:root {
+  --arrowdeg: 0deg;
+}
+
+body header .topmenu {
+  width: 100%;
+  height: 3vh;
+  background: #E19B50;
+  border-bottom: 1px solid lightblue;
+}
+body header .topmenu > ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+body header .topmenu > ul > li {
+  margin: 0px 10px;
+  text-align: center;
+}
+body header .topmenu > ul > li:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+body header .topmenu > ul > li > a {
+  font-size: 1rem;
+  color: #fff;
+}
+body header .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightblue;
+}
+body header .menu .logo {
+  margin-left: 10%;
+}
+body header .menu .logo > img {
+  width: 5vw;
+}
+body header .menu .navbar {
+  width: 50%;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+body header .menu .navbar > ul {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .menu .navbar > ul > li {
+  height: 50px;
+  flex-grow: 1;
+  position: relative;
+  text-align: center;
+}
+body header .menu .navbar > ul > li > a {
+  color: #E19B50;
+  line-height: 50px;
+  font-size: 1.5rem;
+  font-family: "Black Han Sans";
+  position: relative;
+}
+body header .menu .navbar > ul > li > a::after {
+  content: "";
+  width: 0;
+  height: 5px;
+  left: 0;
+  bottom: -8px;
+  position: absolute;
+  border-radius: 20px;
+  background: lightcoral;
+  transition: 0.2s;
+}
+body header .menu .navbar > ul > li:hover > a {
+  color: #E19B50;
+}
+body header .menu .navbar > ul > li:hover > a::after {
+  width: 100%;
+}
+body header .menu .navbar > ul > li:hover .submenu {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+  transition: 0.3s;
+}
+body header .menu .navbar > ul > li .submenu {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  top: 100%;
+  opacity: 0;
+  z-index: 1;
+  background: #FFCA9B;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+body header .menu .navbar > ul > li .submenu > li {
+  padding: 10px 0;
+}
+body header .menu .navbar > ul > li .submenu > li:nth-last-child(1) {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+body header .menu .navbar > ul > li .submenu > li:hover {
+  background: #E19B50;
+  transition: 1s ease;
+}
+body header .menu .navbar > ul > li .submenu > li:hover > a {
+  color: #fff;
+}
+body header .menu .navbar > ul > li .submenu > li > a {
+  font-family: "Black Han Sans";
+  font-size: 1.2rem;
+}
+body header .menu .search {
+  margin: 0 20px 10px 0;
+  width: 250px;
+  align-self: flex-end;
+}
+body header .menu .search > form {
+  width: 100%;
+  position: relative;
+}
+body header .menu .search > form > .search_text {
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 3px #E19B50;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+body header .menu .search > form > .search_text:focus::placeholder {
+  color: transparent;
+}
+body header .menu .search > form > .submit_img {
+  width: 1.5vw;
+  left: 85%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+}
+body figure {
+  width: 100%;
+  height: 30vh;
+}
+body figure > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body section {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid black;
+}
+body section .notice {
+  width: 20vw;
+  height: 30vh;
+  position: relative;
+  border: 1px solid #E19B50;
+}
+body section .notice > table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+body section .notice > table th {
+  padding: 20px 0;
+  text-align: left;
+}
+body section .notice > table th > a {
+  color: #E19B50;
+  font-family: "Black Han Sans";
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+  padding: 0 10px;
+}
+body section .notice > table td {
+  padding: 10px 0;
+  position: relative;
+  border: 1px solid red;
+}
+body section .notice > table td > a {
+  font-family: "Black Han Sans";
+  padding: 0 10px;
+  color: #666;
+}
+body section .notice > table td > a::after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+body section .service {
+  width: 20vw;
+  height: 30vh;
+  border: 1px solid #E19B50;
+}
+body footer {
+  width: 100%;
+  height: 11.8vh;
+  clear: both;
+  background-color: rgba(216, 216, 216, 0.787);
+}
+body footer .footerwrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+body footer .footerwrap .terms {
+  width: 1000px;
+  margin: 5px;
+}
+body footer .footerwrap .terms > ul {
+  display: flex;
+  justify-content: center;
+}
+body footer .footerwrap .terms > ul > li {
+  margin: 0 10px;
+  padding: 0px 10px;
+  border-radius: 20px;
+  background: #E19B50;
+  text-align: center;
+}
+body footer .footerwrap .terms > ul > li > a {
+  font-size: 14px;
+  font-family: "Black Han Sans";
+  color: #FFF;
+}
+body footer .footerwrap .address {
+  text-align: center;
+}
+body footer .footerwrap .address > p {
+  color: #666;
+  font-size: 14px;
+  font-family: "Black Han Sans";
+}
+body footer .footerwrap .representative > ul {
+  display: flex;
+  justify-content: center;
+}
+body footer .footerwrap .representative > ul > li {
+  padding: 0px 10px;
+  border-left: 2px solid #666;
+}
+body footer .footerwrap .representative > ul > li:nth-of-type(1) {
+  padding-left: 0;
+  border: 0;
+}
+body footer .footerwrap .representative > ul > li > p {
+  font-size: 14px;
+  font-family: "Black Han Sans";
+  color: #666;
+}
+body footer .footerwrap .num > ul {
+  display: flex;
+  justify-content: center;
+}
+body footer .footerwrap .num > ul > li {
+  padding: 0 10px;
+  border-left: 2px solid #666;
+}
+body footer .footerwrap .num > ul > li:nth-of-type(1) {
+  padding-left: 0;
+  border: 0;
+}
+body footer .footerwrap .num > ul > li > p {
+  font-size: 14px;
+  font-family: "Black Han Sans";
+  color: #666;
+}
+body footer .footerwrap .pagelink {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: 3vh;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #666;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px;
+}
+body footer .footerwrap .pagelink > .linkbtnlabel {
+  font-size: 16px;
+  font-family: "Black Han Sans";
+  color: #666;
+  line-height: 3vh;
+  position: relative;
+  cursor: pointer;
+}
+body footer .footerwrap .pagelink > .linkbtnlabel::after {
+  content: ">";
+  position: absolute;
+  right: -50px;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+body footer .footerwrap .pagelink > .linkbtnlabel:checked ~ body footer .footerwrap .pagelink > .linkbtnlabel::after {
+  transform: rotate(-90deg);
+}
+body footer .footerwrap .pagelink > ul {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  top: -300%;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=index.css.map */
