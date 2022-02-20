@@ -29,10 +29,6 @@ a {
     left: 65%;
   }
 }
-:root {
-  --arrowdeg: 0deg;
-}
-
 body header .topmenu {
   width: 100%;
   height: 3vh;
@@ -333,7 +329,17 @@ body footer .footerwrap .pagelink {
   border-radius: 20px;
   box-shadow: 2px 2px 5px;
 }
-body footer .footerwrap .pagelink > .linkbtnlabel {
+body footer .footerwrap .pagelink #linkbtn {
+  display: none;
+}
+body footer .footerwrap .pagelink #linkbtn:checked ~ .linkbtnlabel::after {
+  transform: rotate(-90deg);
+}
+body footer .footerwrap .pagelink #linkbtn:checked ~ .sublink {
+  visibility: visible;
+  opacity: 1;
+}
+body footer .footerwrap .pagelink .linkbtnlabel {
   font-size: 16px;
   font-family: "Black Han Sans";
   color: #666;
@@ -341,22 +347,39 @@ body footer .footerwrap .pagelink > .linkbtnlabel {
   position: relative;
   cursor: pointer;
 }
-body footer .footerwrap .pagelink > .linkbtnlabel::after {
+body footer .footerwrap .pagelink .linkbtnlabel::after {
   content: ">";
   position: absolute;
   right: -50px;
-  transform: rotate(0deg);
   transition: all 0.5s;
 }
-body footer .footerwrap .pagelink > .linkbtnlabel:checked ~ body footer .footerwrap .pagelink > .linkbtnlabel::after {
-  transform: rotate(-90deg);
-}
-body footer .footerwrap .pagelink > ul {
+body footer .footerwrap .pagelink .sublink {
   visibility: hidden;
+  opacity: 0;
   position: absolute;
   width: 100%;
-  top: -300%;
-  border: 1px solid black;
+  bottom: 100%;
+  transition: 0.5s;
+  background: #fff;
+  border: 2px solid #E19B50;
+  border-radius: 20px 20px 0 0;
+}
+body footer .footerwrap .pagelink .sublink > li {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+}
+body footer .footerwrap .pagelink .sublink > li > a {
+  font-family: "Black Han Sans";
+  color: #666;
+  display: block;
+}
+body footer .footerwrap .pagelink .sublink > li > a::after {
+  content: ">";
+  position: absolute;
+  font-family: "Black Han Sans";
+  right: 5%;
 }
 
 /*# sourceMappingURL=index.css.map */

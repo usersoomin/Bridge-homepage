@@ -7,10 +7,6 @@ $fontfam : "Black Han Sans";
 $basecolor : #E19B50;
 $ftfcolor : #666;
 
-:root {
-    --arrowdeg : 0deg;
-}
-
 body {
     header {
         .topmenu {
@@ -363,7 +359,21 @@ body {
                 border-radius: 20px;
                 box-shadow: 2px 2px 5px;
 
-                > .linkbtnlabel {
+                #linkbtn {
+                    display: none;
+
+                    &:checked {
+                        ~ .linkbtnlabel::after {
+                            transform: rotate(-90deg);
+                        }
+                        ~ .sublink {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .linkbtnlabel {
                     font-size: 16px;
                     font-family: $fontfam;
                     color: #666;
@@ -375,20 +385,39 @@ body {
                         content: ">";
                         position: absolute;
                         right: -50px;
-                        transform: rotate(0deg);
                         transition: all 0.5s;
                     }
-
-                    &:checked ~ &::after {
-                        transform:rotate(-90deg);
-                    }
                 }
-                > ul {
+                .sublink {
                     visibility: hidden;
+                    opacity: 0;
                     position: absolute;
                     width: 100%;
-                    top: -300%;
-                    border: 1px solid black;
+                    bottom: 100%;
+                    transition: 0.5s;
+                    background: #fff;
+                    border: 2px solid $basecolor;
+                    border-radius: 20px 20px 0 0;
+
+                    > li {
+                        width: 100%;
+                        padding: 5px;
+                        text-align: center;
+                        position: relative;
+
+                        > a {
+                            font-family: $fontfam;
+                            color: #666;
+                            display: block;
+
+                            &::after {
+                                content: ">";
+                                position: absolute;
+                                font-family: $fontfam;
+                                right: 5%;
+                            }
+                        }
+                    }
                 }
             }
         }
