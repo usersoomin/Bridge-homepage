@@ -198,7 +198,6 @@ body {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        border: 1px solid black;
 
         .notice {
             width: 20vw;
@@ -252,6 +251,62 @@ body {
             width: 20vw;
             height: 30vh;
             border: 1px solid $basecolor;
+        }
+        .product_wrap {
+            width: 400px;
+            height: 200px;
+            position: relative;
+            border: 1px solid black;
+
+            .lst_wrap {
+                width: 400px;
+                height: 200px;
+                position: relative;
+
+                .product {
+                    overflow: hidden;
+                    position: absolute;
+    
+                    > li {
+                        transform-origin: center;
+    
+                        > img {
+                            vertical-align: top;
+                            width: 400px;
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+            
+            .btn_top {
+                position: absolute;
+                top: -20%;
+                left: 50%;
+                transform: translateX(-50%);
+                border: none;
+                background: none;
+
+                > i {
+                    font-size: 2rem;
+                    color: #666;
+                    cursor: pointer;
+                }
+            }
+            .btn_bottom {
+                position: absolute;
+                bottom: -20%;
+                left: 50%;
+                transform: translateX(-50%);
+                border: none;
+                background: none;
+                
+                > i {
+                    font-size: 2rem;
+                    color: #666;
+                    cursor: pointer;
+                }
+            }
         }
     }
     footer {
@@ -385,7 +440,7 @@ body {
                         content: ">";
                         position: absolute;
                         right: -50px;
-                        transition: all 0.5s;
+                        transition: all 0.3s;
                     }
                 }
                 .sublink {

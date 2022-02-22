@@ -190,7 +190,6 @@ body section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid black;
 }
 body section .notice {
   width: 20vw;
@@ -239,6 +238,55 @@ body section .service {
   width: 20vw;
   height: 30vh;
   border: 1px solid #E19B50;
+}
+body section .product_wrap {
+  width: 400px;
+  height: 200px;
+  position: relative;
+  border: 1px solid black;
+}
+body section .product_wrap .lst_wrap {
+  width: 400px;
+  height: 200px;
+  position: relative;
+}
+body section .product_wrap .lst_wrap .product {
+  overflow: hidden;
+  position: absolute;
+}
+body section .product_wrap .lst_wrap .product > li {
+  transform-origin: center;
+}
+body section .product_wrap .lst_wrap .product > li > img {
+  vertical-align: top;
+  width: 400px;
+  height: 200px;
+}
+body section .product_wrap .btn_top {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background: none;
+}
+body section .product_wrap .btn_top > i {
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+}
+body section .product_wrap .btn_bottom {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background: none;
+}
+body section .product_wrap .btn_bottom > i {
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
 }
 body footer {
   width: 100%;
@@ -351,7 +399,7 @@ body footer .footerwrap .pagelink .linkbtnlabel::after {
   content: ">";
   position: absolute;
   right: -50px;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 body footer .footerwrap .pagelink .sublink {
   visibility: hidden;
