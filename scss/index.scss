@@ -290,7 +290,13 @@ body {
                 > i {
                     font-size: 2rem;
                     color: #666;
+                    text-shadow: 0px 3px 2px;
                     cursor: pointer;
+
+                    &:active {
+                        color: #999;
+                        text-shadow: 0 0 0;
+                    }
                 }
             }
             .btn_bottom {
@@ -304,7 +310,13 @@ body {
                 > i {
                     font-size: 2rem;
                     color: #666;
+                    text-shadow: 0px -3px 2px;
                     cursor: pointer;
+
+                    &:active {
+                        color: #999;
+                        text-shadow: 0 0 0;
+                    }
                 }
             }
         }
