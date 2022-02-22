@@ -243,11 +243,11 @@ body section .product_wrap {
   width: 400px;
   height: 200px;
   position: relative;
-  border: 1px solid black;
 }
 body section .product_wrap .lst_wrap {
   width: 400px;
   height: 200px;
+  overflow: hidden;
   position: relative;
 }
 body section .product_wrap .lst_wrap .product {

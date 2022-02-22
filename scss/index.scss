@@ -256,11 +256,11 @@ body {
             width: 400px;
             height: 200px;
             position: relative;
-            border: 1px solid black;
 
             .lst_wrap {
                 width: 400px;
                 height: 200px;
+                overflow: hidden;
                 position: relative;
 
                 .product {
